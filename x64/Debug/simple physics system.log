@@ -1,0 +1,21 @@
+﻿  player.cpp
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(114,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(114,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(149,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(153,18): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(158,12): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\drago\source\repos\simple physics system\simple physics system\create shapes.hpp(20,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(75,13): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(74,14): message : while compiling class template member function 'void Vector2<float>::IntoRectXY(SDL_Rect *)'
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(184,22): message : see the first reference to 'Vector2<float>::IntoRectXY' in 'Entity::Entity'
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(113,2): message : see reference to class template instantiation 'Vector2<float>' being compiled
+C:\Users\drago\source\repos\simple physics system\simple physics system\physics.hpp(76,13): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  simple physics system.vcxproj -> C:\Users\drago\source\repos\simple physics system\x64\Debug\simple physics system.exe
