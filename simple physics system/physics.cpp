@@ -17,7 +17,7 @@ void Entity::Finalize() {
 	SDL_DestroyTexture(texture);
 	texture = nullptr;
 }
-Node<RigidBody*> *Physics::SubscribeEntity (const char* texturePath, std::initializer_list<FVector2> _narrowPhaseVertices, FVector2 startPos, IntVec2 size, std::initializer_list<FVector2> _centreOfRot, FVector2 _centreOfRotNPVert, IntVec2 _renderOffset, FVector2 initVel, float angle, float mass) {
+Node<RigidBody*> *Physics::SubscribeEntity (const std::string &texturePath, std::initializer_list<FVector2> _narrowPhaseVertices, FVector2 startPos, IntVec2 size, std::initializer_list<FVector2> _centreOfRot, FVector2 _centreOfRotNPVert, IntVec2 _renderOffset, FVector2 initVel, float angle, float mass) {
 	RigidBody *rb = new RigidBody(startPos, initVel, angle, Images::LoadTexture(texturePath), size, mass, _narrowPhaseVertices, _centreOfRot, _centreOfRotNPVert, _renderOffset);
 	return SubscribeEntity(rb);
 }

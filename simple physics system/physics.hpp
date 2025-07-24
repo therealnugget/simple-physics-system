@@ -433,7 +433,7 @@ private:
 		return initCellSize;
 	}
 public:
-	static Node<RigidBody*> *SubscribeEntity(const char* texturePath, std::initializer_list<FVector2> narrowPhaseVertices = Physics::DefaultSquareVerticesAsList, FVector2 startPos = FVector2::Zero, IntVec2 size = IntVec2::One, std::initializer_list<FVector2> _centreOfRot = std::initializer_list<FVector2>(), FVector2 _centreOfRotNPVert = FVector2::Zero, IntVec2 _renderOffset = IntVec2::Zero, FVector2 initVel = FVector2::Zero, float angle = .0f, float mass = 1.f);
+	static Node<RigidBody*> *SubscribeEntity(const std::string &texturePath, std::initializer_list<FVector2> narrowPhaseVertices = Physics::DefaultSquareVerticesAsList, FVector2 startPos = FVector2::Zero, IntVec2 size = IntVec2::One, std::initializer_list<FVector2> _centreOfRot = std::initializer_list<FVector2>(), FVector2 _centreOfRotNPVert = FVector2::Zero, IntVec2 _renderOffset = IntVec2::Zero, FVector2 initVel = FVector2::Zero, float angle = .0f, float mass = 1.f);
 	static Node<RigidBody*> *SubscribeEntity(RigidBody *);
 	static void Finalize();
 	static void Update(float dt);

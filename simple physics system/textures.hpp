@@ -22,3 +22,7 @@ public:
 		FinalizeMap<SDL_Surface*>(loadedSurfaces);
 	}
 };
+class Textures {
+public:
+	const static std::string playerStaticRight;
+};

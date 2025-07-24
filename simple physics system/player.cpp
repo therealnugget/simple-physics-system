@@ -94,7 +94,7 @@ void Player::Init() {
 		FVector2::Zero
 #endif
 		;
-	plrNode = Physics::SubscribeEntity(Shapes::squarePath.c_str(), Physics::DefaultSquareVerticesAsList, defaultPlrPos + FVector2::GetRight() * playerSize, playerSize, std::initializer_list<FVector2>(), FVector2::Zero, -playerSize * .5f);
+	plrNode = Physics::SubscribeEntity(Textures::playerStaticRight, Physics::DefaultSquareVerticesAsList, defaultPlrPos + FVector2::GetRight() * playerSize, playerSize, std::initializer_list<FVector2>(), FVector2::Zero, -playerSize * .5f);
 	//player2 = Shapes::CreateShape(Physics::DefaultSquareVerticesAsList, defaultPlrPos, playerSize, 1.f, Shapes::square, std::initializer_list<FVector2>(), FVector2::Zero, -playerSize * .5f);
 	constexpr float scaleFact = .1f;
 	FVector2 shapeSize = playerSize * scaleFact;
