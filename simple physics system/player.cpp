@@ -102,7 +102,7 @@ void Player::Init() {
 	for (auto& vec : shapeColVertices) {
 		static_cast<FVector2>(vec) *= scaleFact;
 	}
-	constexpr int numShapes = 100;
+	constexpr int numShapes = 0;
 	constexpr float border = .05f;
 	constexpr float invBorder = 1.f - border;
 	for (int i = 0; i < numShapes; i++) Shapes::CreateShape(shapeColVertices, Main::GetRandFVec(static_cast<const FVector2>(static_cast<FVector2>(Main::DisplaySize) * border), Main::DisplaySize * invBorder), shapeSize, scaleFact, Shapes::blueSqr, std::initializer_list<FVector2>(), FVector2::Zero, -shapeSize * .5f);

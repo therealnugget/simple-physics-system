@@ -165,7 +165,8 @@ int main(int argc, char* args[])
         Main::pastTime = SDL_GetPerformanceCounter();
         SDL_Delay(4);
     } while (!quit);
-    cout << "average delta time over life of program is " << tempDTCumulative / static_cast<double>(tempDTIndex) << '\n';
+    float averageDT = tempDTCumulative / static_cast<double>(tempDTIndex);
+    cout << "average delta time over life of program is " << averageDT << ", thus average fps is " << 1.f / averageDT << '\n';
     Close();
     return 0;
 }
