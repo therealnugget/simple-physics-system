@@ -24,5 +24,5 @@ public:
 };
 class Textures {
 public:
-	const static std::string playerStaticRight;
+	const static std::string playerStaticRight, playerStaticLeft, playerStaticUp, playerStaticDown;
 };

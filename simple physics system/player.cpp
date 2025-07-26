@@ -25,6 +25,7 @@ static void SetPositions(rbList** rbs, int i, int j, RigidBody *rb) {
 	rbs[i]->value->SetPosition(rb->GetNarrowPhaseVertices()[j] + ((static_cast<FVector2>(FVector2::Left) + FVector2::Down) * 2.5f));
 }
 #endif
+constexpr static double rotationSpeed = 144.0 * 2.0;
 void Player::Update() {
 	player->AddForce(Main::fInputVec * accel);
 	//player2Rb->AddForce(Main::fInputVec2 * accel);
@@ -36,7 +37,7 @@ void Player::Update() {
 	if (currentVel.Magnitude() > speed) player->SetVelocity(currentVel.Normalized() * speed);
 	//currentVel = player2Rb->GetVelocity();
 	//if (currentVel.Magnitude() > speed) player2Rb->SetVelocity(currentVel.Normalized() * speed);
-	if (Main::GetKey(SDL_SCANCODE_O)) player->SetRotation(player->GetRotation() + static_cast<double>(Main::DeltaTime()) * 144.0);
+	if (Main::GetKey(SDL_SCANCODE_O)) player->SetRotation(player->GetRotation() + static_cast<double>(Main::DeltaTime()) * rotationSpeed);
 #ifdef SHOW_AABB
 	for (int i = 0; i < 2; i++) {
 		int j = i ? 2 : 0;
@@ -94,7 +95,7 @@ void Player::Init() {
 		FVector2::Zero
 #endif
 		;
-	plrNode = Physics::SubscribeEntity(Textures::playerStaticRight, Physics::DefaultSquareVerticesAsList, defaultPlrPos + FVector2::GetRight() * playerSize, playerSize, std::initializer_list<FVector2>(), FVector2::Zero, -playerSize * .5f);
+	plrNode = Physics::SubscribeEntity(Textures::playerStaticPath, Physics::DefaultSquareVerticesAsList, defaultPlrPos + FVector2::GetRight() * playerSize, playerSize, std::initializer_list<FVector2>(), FVector2::Zero, -playerSize * .5f);
 	//player2 = Shapes::CreateShape(Physics::DefaultSquareVerticesAsList, defaultPlrPos, playerSize, 1.f, Shapes::square, std::initializer_list<FVector2>(), FVector2::Zero, -playerSize * .5f);
 	constexpr float scaleFact = .1f;
 	FVector2 shapeSize = playerSize * scaleFact;
