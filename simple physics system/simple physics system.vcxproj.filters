@@ -71,6 +71,9 @@
     <ClInclude Include="array.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="multicast delegates.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\debug square.png">

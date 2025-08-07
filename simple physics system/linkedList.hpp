@@ -1,6 +1,7 @@
 #pragma once
 #include "linkedList.hpp"
 #include "usefulTypedefs.hpp"
+#include "multicast delegates.hpp"
 //define this for error checking and debug functions
 #define DEBUG_BUILD
 #ifdef DEBUG_BUILD
@@ -12,16 +13,11 @@
 #include <string>
 #include <vector>
 #include <source_location>
-//nb: declares public label
-#define BehaviourBoilerPlate public:\
-void Start();\
-void Update()
 class Behaviour {
 public:
 	void Start();
 	void Update();
 };
-typedef unsigned short ushort;
 using namespace std;
 template<typename T>
 struct Node {
@@ -271,6 +267,7 @@ public:
 	static float timeScale;
 	static Uint64 pastTime;
 	static void EarlyUpdate();
+	static MultiDelegate Update;
 	static void LateUpdate();
 	static void Start();
 	static void Finalize();

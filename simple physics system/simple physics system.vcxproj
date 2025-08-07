@@ -156,6 +156,7 @@
     <ClInclude Include="array.hpp" />
     <ClInclude Include="create shapes.hpp" />
     <ClInclude Include="math.hpp" />
+    <ClInclude Include="multicast delegates.hpp" />
     <ClInclude Include="physics.hpp" />
     <ClInclude Include="player.hpp" />
     <ClInclude Include="textures.hpp" />

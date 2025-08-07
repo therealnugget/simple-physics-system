@@ -89,6 +89,7 @@ static void Close() {
 }
 Uint64 Main::pastTime;
 SDL_Renderer* Main::renderer = nullptr;
+//display mode
 SDL_DisplayMode Main::DM;
 FVector2 Main::DisplaySize;
 FVector2 Main::halfDisplaySize;
@@ -153,6 +154,7 @@ int main(int argc, char* args[])
         if (Main::GetKey(SDL_SCANCODE_ESCAPE)) {
             Main::timeScale = (Main::timeScale == 1.f) ? .0f : 1.f;
         }
+
         Player::Update();
         Physics::Update(Main::DeltaTime());
 //#define SHOW_FPS

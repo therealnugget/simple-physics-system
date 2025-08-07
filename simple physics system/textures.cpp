@@ -2,7 +2,7 @@
 #include "main.hpp"
 #include "winMgr.hpp"
 static const std::string imagesPath = "images/";
-const std::string Textures::playerStaticRight = imagesPath + "Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_static_0.bmp";
+const std::string *Textures::playerIdlePaths/* = imagesPath + "Top_Down_Adventure_Pack_v.1.0/Char_Sprites/idle_down_0.bmp"*/;
 SDL_Texture *Images::LoadTexture(std::string path) {
 	return LoadTexture(path.c_str());
 }

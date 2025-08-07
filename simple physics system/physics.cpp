@@ -241,6 +241,7 @@ void Physics::ThreadFunc(int index) {
 }
 //needs to be called before the first physics simulation tick (i'm not saying "u-p-d-a-t-e" so that when i control-f it it doesn't show up here, because that's annoying.) if the program is multithreaded, because it initializes the thread pool
 void Physics::Init() {
+	Main::Update += Physics::Update;
 #ifdef IS_MULTI_THREADED
 	for (int i = 0; i < thread_count; i++) {
 		workers[i] = std::thread(ThreadFunc, i);
